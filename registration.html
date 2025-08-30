@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <body>
+    <h1>Student Registration Portal</h1>
+    <p>
+        Review all the available courses in the table below and complete the registration form.
+    </p>
+
+    <h3 id="avail">Available Courses</h3>
+    <table class="data" border="1" width="100%">
+        <caption>
+            <h3>Computer Science Courses - A.Y. 2025-26</h3>
+        </caption>
+        <tr id="table-head">
+            <th rowspan="2">Course Code</th>
+            <th rowspan="2">Course Name</th>
+            <th colspan="2">Schedule</th>
+        </tr>
+        <tr id="table-head2">
+            <th>Day</th>
+            <th>Time</th>
+        </tr>
+         <tr>
+            <td>CS101</td>
+            <td>Computer Programming 1</td>
+            <td>Mon & Wed</td>
+            <td>9:00AM - 10:00AM</td>
+         </tr>
+         <tr>
+            <td>CS102</td>
+            <td>Application Development</td>
+            <td>Tue & Thu</td>
+            <td>8:00AM - 9:00AM</td>
+         </tr>
+         <tr>
+            <td>CS103</td>
+            <td>Data Structure and Algorithm</td>
+            <td rowspan="2">Fri & Sat</td>
+            <td>8:00AM - 10:00AM</td>
+         </tr>
+         <tr>
+            <td>CS103</td>
+            <td>Networking and Hardware</td>
+            <td>8:00AM - 10:00AM</td>
+         </tr>
+    </table>
+
+    <form action="./submit.html" class="reg-form">
+        <fieldset>
+            <legend>
+                <h2>Registration Form</h2>
+            </legend>
+             <label for="name">Full Name: </label> <input id="text" name="name" type="text" placeholder="Lastname, Firstname, M.I"/>
+            <br>
+            <br>
+            <label for="email">Email: </label><input id="email" name="email" type="email" placeholder="example@gmail.com" required/>
+            <br>
+            <br>
+
+            <!-- Radio Button -->
+            <h4>Year Level</h4>
+            <input type="radio" name="year" id="first" value="1st Year" required>
+            <label for="first">1st Year</label><br />
+            <input type="radio" name="year" id="second" value="2st Year" >
+            <label for="second">2nd Year</label><br />
+            <input type="radio" name="year" id="third" value="3rd Year" >
+            <label for="third">3rd Year</label><br />
+            <input type="radio" name="year" id="first" value="4th Year" >
+            <label for="fourth">4th Year</label>
+            <br>
+            <br>
+            <!-- Checkboxes -->
+             <h4>Prefered Study Mode (Optional)</h4>
+             <input type="checkbox" id="onl" name="mode" value="Online">
+             <label for="Online">Online</label><br />
+             <input type="checkbox" id="ons" name="mode" value="Onsite">
+             <label for="Onsite">Onsite</label><br />
+             <br>
+            <!-- Dropdown -->
+             <label for="course">Select courses:</label>
+             <select name="course" id="course" required>
+                <option value="">Choose a Course</option>
+                <option value="CS101">CS101 - Computer Programming 1</option>
+                <option value="CS101">CS102 - Application Development</option>
+                <option value="CS101">CS103 - Data Structure and Algorithm</option>
+                <option value="CS101">CS104 - Networking and Hardware</option>
+             </select>
+             <br>
+             <br>
+             <!-- Text Area -->
+              <textarea for="comments" id="comments" rows="4" cols="40" placeholder="Enter any additional requests or notes..."></textarea>
+              <br>
+              <br>
+              <button type="submit">Register</button>
+              <button type="reset">Clear</button>
+        </fieldset>
+        
+    </form>
+</body>
+</html>
